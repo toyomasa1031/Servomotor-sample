@@ -1,6 +1,6 @@
 pins.servoWritePin(AnalogPin.P0, 0)
 basic.forever(function () {
-    if (input.lightLevel() == 0) {
+    if (pins.analogReadPin(AnalogPin.P1) > 400) {
         basic.showIcon(IconNames.Happy)
         pins.servoWritePin(AnalogPin.P0, 90)
         basic.pause(200)
